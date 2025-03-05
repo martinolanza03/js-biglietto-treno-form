@@ -2,12 +2,13 @@ const elementNumberKm = document.getElementById('numberKm');
 const elementAge = document.getElementById('age');
 const elementSubmit = document.getElementById('sendForm');
 const elementResult = document.getElementById('result');
+const elementForm = document.getElementById('form');
 
 console.log(elementNumberKm);
 console.log(elementAge);
 console.log(elementSubmit);
 
-elementSubmit.addEventListener('submit', function(event){
+elementForm.addEventListener('submit', function(event){
     event.preventDefault();
 
     // Calcolo prezzo biglietto
@@ -30,9 +31,6 @@ elementSubmit.addEventListener('submit', function(event){
     }
 
     console.log(parseFloat(costTicket.toFixed(2)));
-
-    //Stampa a schermo il risultato
-    elementResult.classList.remove('hidden');
 
 
 });
