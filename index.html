@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto Treno</title>
 
-    <!--link bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!--link css-->
+    <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <form action="./index.html" id="form">
-        <label for="numberKm">Quanti chilometri devi percorrere?</label> <br>
-        <input type="number" id="numberKm"><br>
-        <label for="age">Quanti anni hai?</label> <br>
-        <input type="number" id="age"> <br>
-        <input type="submit" name="" value="Invia" id="sendForm">
-    </form>
 
-    <div id="result"></div>
-    <!--link js-->
-    <script src="js/app.js"></script>    
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Form -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Calcola il costo del biglietto</h2>
+
+                        <form id="form">
+                            <div class="mb-3">
+                                <label for="numberKm" class="form-label">Quanti chilometri devi percorrere?</label>
+                                <input type="number" id="numberKm" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Quanti anni hai?</label>
+                                <input type="number" id="age" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Calcola</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /Form -->
+
+            <!-- Result -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Risultato</h2>
+                        <ul id="result" class="list-group">
+                            <!-- Risultato verrà inserito qui -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Result -->
+
+    <!-- link js -->
+    <script src="js/app.js"></script>
 </body>
+
 </html>

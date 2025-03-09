@@ -16,7 +16,11 @@ elementForm.addEventListener('submit', function (event) {
 
     // Crea un nuovo elemento li
     const newListItem = document.createElement('li');
-    newListItem.innerText = `Il costo del biglietto è:${ticketCost} €`;
+    newListItem.innerText = `Il costo del biglietto è: ${ticketCost} €`;
+
+    // Aggiungere classi css
+    newListItem.classList.add('list-group-item', 'bg-primary', 'text-white', 'mb-3',);
+    newListItem.style.fontWeight = 'bold';
 
     // Aggiungi il nuovo elemento li alla lista ul
     elementResult.appendChild(newListItem);
